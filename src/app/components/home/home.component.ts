@@ -1,10 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AccordionModule } from 'primeng/accordion';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule],
+  imports: [
+    FormsModule,
+    AccordionModule,
+    CommonModule 
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -40,4 +46,10 @@ DeleteTask(i : number){
   this.tasks.splice(i, 1);
   this.isAvilable = this.tasks.length > 0;
 }
+
+tabs = [
+  { title: 'Title 1', content: 'Content 1' },
+  { title: 'Title 2', content: 'Content 2' },
+  { title: 'Title 3', content: 'Content 3' }
+];
 }

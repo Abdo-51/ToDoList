@@ -29,7 +29,6 @@ export class HomeComponent {
         this.newTask ='';
         this.isAvilable = true ;    
       }
-      console.log(this.tasks);
   }
   
   EditTask(index: number, newTaskEdit: string ): string | void {
